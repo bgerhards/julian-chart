@@ -8,7 +8,25 @@
 	background-color: yellow;
 }
 
+.table>tbody>tr>td.highlightedMonDay {
+	background-color: rgba(113, 198, 222, .15);
+}
+
 .table>tbody>tr>th.highlightedMonDay,
 .table>thead>tr>th.highlightedMonDay {
-	background-color: yellow;
+	background-color: rgba(113, 198, 222, .70);
+}
+
+.table>tbody>tr>td.selectedMonDay,
+.table>tbody>tr>th.selectedMonDay,
+.table>thead>tr>th.selectedMonDay {
+	background-color: rgba(3, 104, 133, .20);
+}
+
+.table>tbody>tr>th.selectedMonDay,
+.table>thead>tr>th.selectedMonDay {
+	background-color: rgba(3, 104, 133, .70);
+}
+.table>tbody>tr>td.selectedMonDay:hover {
+	background-color: rgba(0, 193, 135, .50);
 }
