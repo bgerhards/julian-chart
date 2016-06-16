@@ -26,14 +26,15 @@ $(function() {
     });
 
     $('td').click(function() {
-        if ($(this).hasClass("selectedMonDay")) {
+        if ($(this).hasClass("clickedMonDay")) {
             $(".selectedMonDay").removeClass("selectedMonDay");
+            $(".clickedMonDay").removeClass("clickedMonDay");
         } else {
             var col = $(this).parent().children().index($(this));
             var row = $(this).parent().parent().children().index($(this).parent());
             $(".selectedMonDay").removeClass("selectedMonDay");
             $(getHighlightRowCol(row, col)).addClass("selectedMonDay");
-            $(this).addClass("selectedMonDay");
+            $(this).addClass("selectedMonDay clickedMonDay");
         }
     });
 });

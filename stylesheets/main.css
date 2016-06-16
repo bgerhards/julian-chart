@@ -18,9 +18,12 @@
 }
 
 .table>tbody>tr>th.selectedMonDay,
-.table>thead>tr>th.selectedMonDay {
+.table>thead>tr>th.selectedMonDay,
+.table>tbody>tr>th.selectedMonDay.clickedMonDay,
+.table>thead>tr>th.selectedMonDay.clickedMonDay {
 	background-color: rgba(3, 104, 133, .70);
 }
+
 .table>tbody>tr>td.selectedMonDay:hover {
 	background-color: rgba(0, 193, 135, .50);
 }
