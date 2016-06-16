@@ -1,4 +1,13 @@
 $(function() {
+    $('#dateTimePicker').datetimepicker({
+        viewMode: 'years',
+        format: 'MM/DD/YYYY'
+    });
+    buildJulianDiv();
+    buildJulianTable();
+});
+
+function buildJulianTable() {
     var calendarMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var currentYear = 2000;
     var numMonths = 12;
@@ -17,30 +26,15 @@ $(function() {
 
     // Add table body
     addRows(numDays, startDay);
+    setTableEvents();
+}
 
-    $('td').mouseover(function() {
-        var col = $(this).parent().children().index($(this));
-        var row = $(this).parent().parent().children().index($(this).parent());
-        $(".highlightedMonDay").removeClass("highlightedMonDay");
-        $(getHighlightRowCol(row, col)).addClass("highlightedMonDay");
-    });
-
-    $('td').click(function() {
-        if ($(this).hasClass("clickedMonDay")) {
-            $(".selectedMonDay").removeClass("selectedMonDay");
-            $(".clickedMonDay").removeClass("clickedMonDay");
-        } else {
-            var col = $(this).parent().children().index($(this));
-            var row = $(this).parent().parent().children().index($(this).parent());
-            $(".selectedMonDay").removeClass("selectedMonDay");
-            $(getHighlightRowCol(row, col)).addClass("selectedMonDay");
-            $(this).addClass("selectedMonDay clickedMonDay");
-        }
-    });
-});
+function buildJulianDiv() {
+    $('.julian').append('<div class="julianTable"></div>');
+}
 
 function addTable() {
-    $('.julian').append('<table class="table table-striped table-bordered"><thead></thead><tbody></tbody></table>');
+    $('.julianTable').append('<table class="table table-striped table-bordered"><thead></thead><tbody></tbody></table>');
 }
 
 function getHighlightRowCol(row, col) {
@@ -67,4 +61,30 @@ function addRows(numDays, startDay) {
         for (var a = 0; a < 12; a++) $('.julian  tbody tr:last').append('<td class="julianBody">' + (numDays[a] > i ? startDay[a] + i : '') + '</td>');
         $('.julian  tbody tr:last').append('<th class="julianDayCount">' + (i + 1) + '</th>');
     }
+}
+
+function setTableEvents() {
+    $('td').mouseover(function() {
+        var col = $(this).parent().children().index($(this));
+        var row = $(this).parent().parent().children().index($(this).parent());
+        $(".highlightedMonDay").removeClass("highlightedMonDay");
+        $(getHighlightRowCol(row, col)).addClass("highlightedMonDay");
+    });
+
+    $('td').click(function() {
+        if ($(this).hasClass("clickedMonDay")) {
+            $(".selectedMonDay").removeClass("selectedMonDay");
+            $(".clickedMonDay").removeClass("clickedMonDay");
+        } else {
+            var col = $(this).parent().children().index($(this));
+            var row = $(this).parent().parent().children().index($(this).parent());
+            $(".selectedMonDay").removeClass("selectedMonDay");
+            $(getHighlightRowCol(row, col)).addClass("selectedMonDay");
+            $(this).addClass("selectedMonDay clickedMonDay");
+        }
+    });
+
+    $('dateTimeInput').change(function() {
+        alert("Hello");
+    });
 }

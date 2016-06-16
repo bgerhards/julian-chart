@@ -1,47 +1,47 @@
-.table>tbody>tr>td.julianBody:hover {
+.julianTable>.table>tbody>tr>td.julianBody:hover {
 	background-color: yellow;
 }
 
-.table>tbody>tr>td.highlightedMonDay {
+.julianTable>.table>tbody>tr>td.highlightedMonDay {
 	background-color: rgba(113, 198, 222, .15);
 }
 
-.table>tbody>tr>th.highlightedMonDay,
-.table>thead>tr>th.highlightedMonDay {
+.julianTable>.table>tbody>tr>th.highlightedMonDay,
+.julianTable>.table>thead>tr>th.highlightedMonDay {
 	background-color: rgba(113, 198, 222, .70);
 }
 
-.table>tbody>tr>td.selectedMonDay,
-.table>tbody>tr>th.selectedMonDay,
-.table>thead>tr>th.selectedMonDay {
+.julianTable>.table>tbody>tr>td.selectedMonDay,
+.julianTable>.table>tbody>tr>th.selectedMonDay,
+.julianTable>.table>thead>tr>th.selectedMonDay {
 	background-color: rgba(3, 104, 133, .20);
 }
 
-.table>tbody>tr>th.selectedMonDay,
-.table>thead>tr>th.selectedMonDay,
-.table>tbody>tr>th.selectedMonDay.clickedMonDay,
-.table>thead>tr>th.selectedMonDay.clickedMonDay {
+.julianTable>.table>tbody>tr>th.selectedMonDay,
+.julianTable>.table>thead>tr>th.selectedMonDay,
+.julianTable>.table>tbody>tr>th.selectedMonDay.clickedMonDay,
+.julianTable>.table>thead>tr>th.selectedMonDay.clickedMonDay {
 	background-color: rgba(3, 104, 133, .70);
 }
 
-.table>tbody>tr>td.selectedMonDay:hover {
+.julianTable>.table>tbody>tr>td.selectedMonDay:hover {
 	background-color: rgba(0, 193, 135, .50);
 }
 
-.julian>.table>tbody>tr>td, 
-.table>tbody>tr>th, 
-.table>tfoot>tr>td, 
-.table>tfoot>tr>th, 
-.table>thead>tr>td, 
-.table>thead>tr>th {
+.julianTable>.table>tbody>tr>td, 
+.julianTable>.table>tbody>tr>th, 
+.julianTable>.table>tfoot>tr>td, 
+.julianTable>.table>tfoot>tr>th, 
+.julianTable>.table>thead>tr>td, 
+.julianTable>.table>thead>tr>th {
 	padding: 2px 2px 2px 8px;
 }
 
-.julian>.table>tbody>tr>td, 
-.julian>.table>tbody>tr>th, 
-.julian>.table>tfoot>tr>td, 
-.julian>.table>tfoot>tr>th, 
-.julian>.table>thead>tr>td, 
-.julian>.table>thead>tr>th {
+.julianTable>.table>tbody>tr>td, 
+.julianTable>.table>tbody>tr>th, 
+.julianTable>.table>tfoot>tr>td, 
+.julianTable>.table>tfoot>tr>th, 
+.julianTable>.table>thead>tr>td, 
+.julianTable>.table>thead>tr>th {
 	padding: 2px 2px 2px 8px;
 }
